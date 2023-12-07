@@ -65,7 +65,7 @@ public class QuestPoint : MonoBehaviour
         if (quest.info.id.Equals(questId))
         {
             currentQuestState = quest.state;
-            //Debug.Log("Quest with id: " + questId + "update to state: " + currentQuestState);
+            Debug.Log("Quest with id: " + questId + "update to state: " + currentQuestState);
             questIcon.SetState(currentQuestState, startPoint, finishPoint);
         }
     }

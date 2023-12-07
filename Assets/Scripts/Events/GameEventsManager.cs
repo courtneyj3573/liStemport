@@ -14,6 +14,7 @@ public class GameEventsManager : MonoBehaviour
 
     private void Awake()
     {
+        Debug.Log("GameEventsManager Awake");
         if (instance != null)
         {
             Debug.LogError("Found more than one Game Events Manager in the scene.");
@@ -24,7 +25,7 @@ public class GameEventsManager : MonoBehaviour
         //initialize all events
         inputEvents = new InputEvents();
         playerEvents = new PlayerEvents();
-        //ruitEvents = new FruitEvents();
+        //fruitEvents = new FruitEvents();
         miscEvents = new MiscEvents();
         questEvents = new QuestEvents();
     }   
