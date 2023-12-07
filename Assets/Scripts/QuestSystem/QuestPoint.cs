@@ -32,12 +32,12 @@ public class QuestPoint : MonoBehaviour
     }
 
     //unsubscribe to event
-    /*private void OnDisable()
+    private void OnDisable()
     {
         GameEventsManager.instance.questEvents.onQuestStateChange -= QuestStateChange;
         GameEventsManager.instance.inputEvents.onSubmitPressed -= SubmitPressed;
     }
-    */
+    
     private void SubmitPressed()
     {
         if (!playerIsNear)

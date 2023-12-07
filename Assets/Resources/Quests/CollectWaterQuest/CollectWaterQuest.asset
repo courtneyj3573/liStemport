@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42edc845415d8dc4db3c8ecb12af2fe2, type: 3}
+  m_Name: CollectWaterQuest
+  m_EditorClassIdentifier: 
+  <id>k__BackingField: CollectWaterQuest
+  displayName: Collect a Water Sample
+  levelRequirement: 1
+  questPrerequisites:
+  - {fileID: 11400000, guid: 8fc6fb0a6678a3940bebc23aacafb2da, type: 2}
+  questStepPrefabs:
+  - {fileID: 263436254788553313, guid: fe33167585ef0f544a5d97e8ac76bd51, type: 3}
+  experienceReward: 25

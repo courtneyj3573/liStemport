@@ -17,6 +17,7 @@ MonoBehaviour:
   levelRequirement: 1
   questPrerequisites: []
   questStepPrefabs:
-  - {fileID: 5935695715397646887, guid: 79c16d2483ec3d04196796a2f3e2a7ed, type: 3}
-  goldReward: 50
+  - {fileID: 108556923225033505, guid: 3436842476d05a3498b4bd7f0e67d0f9, type: 3}
+  - {fileID: 108556923225033505, guid: 729a5a9faaf4ed44bae1dff72bf1856c, type: 3}
+  - {fileID: 108556923225033505, guid: 770d4023cfceb2d439cf35ee6cdd1bd4, type: 3}
   experienceReward: 25

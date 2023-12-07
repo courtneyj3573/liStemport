@@ -2,31 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollectFruitQuest : QuestStep
+[RequireComponent(typeof(CircleCollider2D))]
+public class CollectFruitQuestStep : QuestStep
 {
-    private int fruitCollected = 0;
-    private int fruitToComplete = 3;
-
-    private void OnEnable()
+    private void OnTriggerEnter2D(Collider2D otherCollider)
     {
-        GameEventsManager.instance.miscEvents.onFruitCollected += FruitCollected;
-    }
-
-    private void OnDisable()
-    {
-        GameEventsManager.instance.miscEvents.onFruitCollected -= FruitCollected;
-    }
-
-    private void FruitCollected()
-    {
-        if (fruitCollected < fruitToComplete)
-        {
-            fruitCollected++;
-        }
-
-        if (fruitCollected >= fruitToComplete)
+        if (otherCollider.CompareTag("Player"))
         {
             FinishQuestStep();
         }
     }
+    //protected override void SetQuestStepState(string state)
+    //{
+        //no statee is needed for this quest step
+        //throw new System.NotImplementedException();
+    //}
 }

@@ -13,11 +13,11 @@ public class QuestManager : MonoBehaviour
     {
         questMap = CreateQuestMap();
         //to test and make sure it is running properly
-        //Quest quest = GetQuestById("CollectFruitQuest");
-        //Debug.Log(quest.info.displayName);
-        //Debug.Log(quest.info.levelRequirement);
-        //Debug.Log(quest.state);
-        //Debug.Log(quest.CurrentStepExists());
+        Quest quest = GetQuestById("CollectFruitQuest");
+        Debug.Log(quest.info.displayName);
+        Debug.Log(quest.info.levelRequirement);
+        Debug.Log(quest.state);
+        Debug.Log(quest.CurrentStepExists());
     }
 
     //subscribing to event

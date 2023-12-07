@@ -24,11 +24,11 @@ public class PlayerLevelManager : MonoBehaviour
     }
 
     //unsubscribe to event
-    /*private void OnDisable()
+    private void OnDisable()
     {
         GameEventsManager.instance.playerEvents.onExperienceGained -= ExperienceGained;
     }
-    */
+    
     private void Start()
     {
         GameEventsManager.instance.playerEvents.PlayerLevelChange(currentLevel);

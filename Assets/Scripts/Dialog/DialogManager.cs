@@ -11,6 +11,10 @@ public class DialogManager : MonoBehaviour
 
     [SerializeField] int lettersPerSecond;
 
+    [SerializeField] private AudioClip dialogTypingSoundClip;
+
+    private AudioSource audioSource;
+
     public event Action OnShowDialog;
     public event Action OnHideDialog;
 
@@ -18,6 +22,8 @@ public class DialogManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+
+        audioSource = this.gameObject.AddComponent<AudioSource>();
     }
 
     Dialog dialog;
@@ -61,6 +67,7 @@ public class DialogManager : MonoBehaviour
         foreach (var letter in line.ToCharArray())
         {
             dialogText.text += letter;
+            audioSource.PlayOneShot(dialogTypingSoundClip);
             yield return new WaitForSeconds(1f / lettersPerSecond);
         }
         isTyping = false;
